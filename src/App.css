@@ -14,14 +14,12 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: .15rem 0;
+  text-align: center;
+  background-color: #34b64a;
+  font-family: Poppins, sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
 .App-link {
@@ -35,4 +33,100 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+ th {
+  background: #ccc;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background: #efefef;
+}
+
+tr:hover {
+  background: #d1d1d1;
+}
+
+.filterlist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 25rem;
+} 
+
+.filter-options ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.22rem;
+  color: #27df40;
+}
+
+.filter-options li {
+  cursor: pointer;
+  width: 4.33rem;
+  border-bottom: 1px solid rgb(39, 192, 19);
+  padding: 0 2.58rem .33rem 2.58rem;
+  line-height: 1.13;
+  text-align: center;
+  font-weight: 600;
+  font-size: .83rem;
+  transition: color .25s;
+}
+
+.filter-options li:hover {
+  color: #189938;
+}
+
+.filter-options li.active,
+.filter-options li.active:hover {
+  border-bottom: 1px solid #f0c36c;
+  color: #f0c36c;
+}
+
+.filter-fields {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.88rem;
+}
+
+.filter-fields input {
+  width: 21rem;
+  padding: .66rem 1rem;
+  margin-right: 2.22rem;
+  border: 1px solid rgb(22, 190, 73);
+  border-radius: 4px;
+  font-size: .77rem;
+  font-weight: 500;
+}
+
+.filter-fields input:last-child {
+  margin-right: 0;
+}
+
+.filter-submit {
+  text-align: center;
+}
+
+.filter-submit a {
+  border-radius: 4px;
+  padding: .72rem 1.7rem;
+  background-color: #179b43;
+  color: #ffffff;
+  font-weight: 600;
+  transition: background-color .5s;
+}
+
+.filter-submit a:hover {
+  cursor: pointer;
+  background-color: #a7874b;
 }
