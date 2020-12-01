@@ -21,6 +21,8 @@ interface Data {
   data: Vehicle[];
 }
 
+type filterOptions = 'registration' | 'fuel' | 'manufacturer' | 'tyres';
+
 class App extends Component<{}, Data> {
 
   constructor(props: {}) {
@@ -36,7 +38,7 @@ class App extends Component<{}, Data> {
 
   }
 
-  filterData(filterWord: string, filterBy: string) {
+  filterData(filterWord: string, filterBy: filterOptions) {
     let filtered = this.state.data.filter(vehicle => vehicle[filterBy].toLowerCase().includes(filterWord.toLowerCase()));
       
     this.setState({ data: filtered});
